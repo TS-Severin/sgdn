@@ -15,7 +15,7 @@ export default async function Home() {
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 {landingPage.title}
               </h1>
-              <p>{landingPage.blurb.json}</p>
+              {/* <p>{landingPage.blurb.json}</p> */}
               <Image
                 alt="placeholder"
                 className="aspect-[4/4] object-cover w-full"
