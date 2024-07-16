@@ -15,13 +15,13 @@ export default async function Home() {
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 {landingPage.title}
               </h1>
-              {/* <Image
+              <Image
                 alt="placeholder"
                 className="aspect-[4/4] object-cover w-full"
                 height="263"
                 src={landingPage.oneImage.url}
                 width="350"
-              /> */}
+              />
               <p className="max-w-[900px] text-zinc-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-zinc-400">
                 Discover our latest articles and stay up to date with the newest
                 technologies, features, and trends.
