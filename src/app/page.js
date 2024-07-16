@@ -3,9 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default async function Home() {
-
-  // const { isEnabled } = draftMode();
-  const articles = await getAllArticles(3, isEnabled);
+  const articles = await getAllArticles();
   const landingPage = await getLandingPage();
 
   return (
