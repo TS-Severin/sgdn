@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default async function Home() {
 
-  const { isEnabled } = draftMode();
+  // const { isEnabled } = draftMode();
   const articles = await getAllArticles(3, isEnabled);
   const landingPage = await getLandingPage();
 
