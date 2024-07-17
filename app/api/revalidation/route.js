@@ -17,3 +17,6 @@ export async function POST(request) {
     return NextResponse.json({ revalidated: true, now: Date.now() });
 }
 
+export async function GET() {
+    return NextResponse.json({ message: 'Method Not Allowed' }, { status: 405 });
+}
