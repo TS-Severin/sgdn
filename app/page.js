@@ -1,10 +1,11 @@
-import { getAllArticles, getLandingPage } from "../lib/api";
+import { getAllArticles } from "@/lib/api";
 import Image from "next/image";
 import Link from "next/link";
+import { draftMode } from "next/headers";
 
 export default async function Home() {
-  const articles = await getAllArticles();
-  const landingPage = await getLandingPage();
+  const { isEnabled } = draftMode();
+  const articles = await getAllArticles(3, isEnabled);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-white">
@@ -13,16 +14,8 @@ export default async function Home() {
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                {landingPage.title}
+                Welcome to our Knowledge Base
               </h1>
-              {/* <p>{landingPage.blurb.json}</p> */}
-              <Image
-                alt="placeholder"
-                className="aspect-[4/4] object-cover w-full"
-                height="263"
-                src={landingPage.oneImage.url}
-                width="350"
-              />
               <p className="max-w-[900px] text-zinc-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-zinc-400">
                 Discover our latest articles and stay up to date with the newest
                 technologies, features, and trends.
@@ -35,7 +28,7 @@ export default async function Home() {
                 <article key={article.sys.id} className="h-full flex flex-col rounded-lg shadow-lg overflow-hidden">
                   <Image
                     alt="placeholder"
-                    className="aspect-[4/4] object-cover w-full"
+                    className="aspect-[4/3] object-cover w-full"
                     height="263"
                     src={article.articleImage.url}
                     width="350"
