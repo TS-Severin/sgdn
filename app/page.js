@@ -1,4 +1,5 @@
 import { getAllArticles } from "@/lib/api";
+import { getLandingpage } from "@/lib/api";
 import Image from "next/image";
 import Link from "next/link";
 import { draftMode } from "next/headers";
@@ -6,9 +7,10 @@ import { draftMode } from "next/headers";
 export default async function Home() {
   const { isEnabled } = draftMode();
   const articles = await getAllArticles(3, isEnabled);
-
+  const landingpage = await getLandingpage();
+  console.log("landingpage data: ", landingpage);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-white">
+    < main className="flex min-h-screen flex-col items-center justify-between p-24 bg-white" >
       <section className="w-full pt-12">
         <div className="mx-auto container space-y-12 px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -63,6 +65,6 @@ export default async function Home() {
           </div>
         </div>
       </section>
-    </main>
+    </main >
   );
 }
