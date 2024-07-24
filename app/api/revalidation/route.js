@@ -10,7 +10,7 @@ export async function POST(request) {
     }
 
     revalidateTag("articles");
-    // revalidateTag("landingpage");
+    revalidateTag("landingpage");
 
     return NextResponse.json({ revalidated: true, now: Date.now() });
 }
