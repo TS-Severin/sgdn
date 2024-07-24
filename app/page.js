@@ -9,7 +9,7 @@ export default async function Home() {
   const { isEnabled } = draftMode();
   const articles = await getAllArticles(3, isEnabled);
   const landingpage = await getLandingpage();
-  console.log("landingpage data: ", landingpage);
+  // console.log("landingpage data: ", landingpage);
   // console.log("articles data: ", articles);
   return (
     < main className="flex min-h-screen flex-col items-center justify-between p-24" >
@@ -18,7 +18,7 @@ export default async function Home() {
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                {landingpage[0].title}
+
               </h1>
               <div className="max-w-[900px] text-zinc-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-zinc-400">
 
