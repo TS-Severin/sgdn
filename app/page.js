@@ -10,7 +10,7 @@ export default async function Home() {
   const landingpage = await getLandingpage();
   console.log("landingpage data: ", landingpage);
   return (
-    < main className="flex min-h-screen flex-col items-center justify-between p-24 bg-white" >
+    < main className="flex min-h-screen flex-col items-center justify-between p-24" >
       <section className="w-full pt-12">
         <div className="mx-auto container space-y-12 px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
