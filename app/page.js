@@ -9,9 +9,12 @@ export default async function Home() {
   const { isEnabled } = draftMode();
   const articles = await getAllArticles(3, isEnabled);
   const landingpage = await getLandingpage();
-  // console.log("landingpage data: ", landingpage);
-  // console.log("articles data: ", articles);
+  console.log("landingpage data: ", landingpage);
+  console.log("articles data: ", articles);
+  // {documentToReactComponents(landingpage[0].introLong.json)}
+  //  {landingpage[0].title}
   return (
+
     < main className="flex min-h-screen flex-col items-center justify-between p-24" >
       <section className="w-full pt-12">
         <div className="mx-auto container space-y-12 px-4 md:px-6">
