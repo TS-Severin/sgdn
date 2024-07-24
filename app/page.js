@@ -1,5 +1,6 @@
 import { getAllArticles } from "@/lib/api";
 import { getLandingpage } from "@/lib/api";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Image from "next/image";
 import Link from "next/link";
 import { draftMode } from "next/headers";
@@ -9,6 +10,7 @@ export default async function Home() {
   const articles = await getAllArticles(3, isEnabled);
   const landingpage = await getLandingpage();
   console.log("landingpage data: ", landingpage);
+  // console.log("articles data: ", articles);
   return (
     < main className="flex min-h-screen flex-col items-center justify-between p-24" >
       <section className="w-full pt-12">
@@ -18,10 +20,9 @@ export default async function Home() {
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 {landingpage[0].title}
               </h1>
-              <p className="max-w-[900px] text-zinc-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-zinc-400">
-                Discover our latest articles and stay up to date with the newest
-                technologies, features, and trends.
-              </p>
+              <div className="max-w-[900px] text-zinc-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-zinc-400">
+                {documentToReactComponents(landingpage[0].introLong.json)}
+              </div>
             </div>
           </div>
           <div className="space-y-12">

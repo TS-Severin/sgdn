@@ -29,7 +29,6 @@ export async function GET(request) {
         return new Response(`${type} not found`, { status: 404 });
     }
 
-
     draftMode().enable();
     redirect(`/${type}s/${content.slug}`);
 }
