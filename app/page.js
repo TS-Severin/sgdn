@@ -12,9 +12,7 @@ export default async function Home() {
   console.log("landingpage data: ", landingpage);
   console.log("articles data: ", articles);
   console.log("homepage data: ", homepage);
-  console.log("wir data", wir);
-  // {documentToReactComponents(homepage[0].langesIntro.json)}
-  //  {homepagepage[0].title}
+
   return (
     <>
       <h1>{homepage[0].titel}</h1>
