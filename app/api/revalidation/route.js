@@ -12,6 +12,7 @@ export async function POST(request) {
     revalidateTag("articles");
     revalidateTag("landingpage");
     revalidateTag("homepage");
+    revalidateTag("ausgabe");
 
     return NextResponse.json({ revalidated: true, now: Date.now() });
 }
