@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main>{children}</main>
         <div className="flex-1"></div>
-        <Footer className="mt-[-20px]" />
+        <Footer />
 
       </body>
     </html>

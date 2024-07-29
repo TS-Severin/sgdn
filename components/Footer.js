@@ -1,6 +1,14 @@
 export default function Footer() {
     return (
-        <h1>Footer</h1>
+        <div className="flex justify-between">
+            <p>Impressum</p>
+            <div className="flex">
+                <p>E-mail</p>
+                <p>Instagram</p>
+                <p>Facebook</p>
+            </div>
 
+
+        </div>
     );
 }
