@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar";
 export default function Header() {
     return (
         <div
-            className="flex justify-between"
+            className="flex justify-between mb-4"
         >
             <Link href="/">
                 <Image

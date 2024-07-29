@@ -2,15 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-}
-
 html {
   display: flex;
   justify-content: center;
+  background-color: var(--background);
 }
 
 body {
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -19,12 +18,47 @@ body {
   background-repeat: no-repeat;
   background-size: 920px auto;
   background-position: top center;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-color: white;
+}
+
+:root {
+  /* --background: #eab8e6; */
+  --background: #e1f0f7;
+  --text: black;
+  --primary: white;
+  --secondary: #b400a5;
+  --tertiary: #a0ff00;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --background: #121212;
+    --text: white;
+    --primary: #333333;
+    --secondary: #7a0073;
+    --tertiary: #5a8b00;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply text-white;
+  }
+  h2 {
+    @apply text-black font-bold;
+  }
+  h3 {
+    @apply text-black;
+  }
+  a {
+    @apply text-black underline;
+  }
+  a:hover {
+    @apply text-[#a0ff00] underline;
+  }
+  a:hover {
+    @apply text-[#a0ff00];
   }
 }
 
