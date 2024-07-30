@@ -12,8 +12,8 @@ export default async function Home() {
 
   return (
     <>
-      <h1>{homepage[0].titel}</h1>
-      <h2>{documentToReactComponents(homepage[0].kurzesIntro.json)}</h2>
+      <h1 className="font-roboto text-4xl pb-4">{homepage[0].titel}</h1>
+      <h2 className="font-roboto text-lg pb-4">{documentToReactComponents(homepage[0].kurzesIntro.json)}</h2>
       <div>
         {documentToReactComponents(homepage[0].langesIntro.json)}
       </div>

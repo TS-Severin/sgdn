@@ -2,12 +2,12 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <div className="flex justify-between">
-            <Link href="/impressum"><p>Impressum</p></Link>
+        <div className="flex text-sm justify-between">
+            <Link href="/impressum" className=" no-underline"><p>IMPRESSUM</p></Link>
             <div className="flex">
-                <p>E-mail</p>
-                <p>Instagram</p>
-                <p>Facebook</p>
+                <Link href="mailto:ahoj@schreibengegendienormen.de" className="no-underline pl-4"><p>E-MAIL</p></Link>
+                <Link href="https://www.instagram.com/schreibengegendienormen/" className="no-underline pl-4"><p>INSTAGRAM</p></Link>
+                <Link href="https://www.facebook.com/schreibengegendienormen" className="no-underline  px-4"><p>FACEBOOK</p></Link>
             </div>
 
 

@@ -4,9 +4,9 @@ export default function Navbar() {
 
 
     return (
-        <div className="flex space-between">
-            <Link href="/wir">Wir</Link>
-            <Link href="/ausgaben">Veranstaltungen</Link>
+        <div className="flex font-roboto text-sm space-between">
+            <Link href="/wir" className="text-white no-underline"><p className="px-4">WIR</p></Link>
+            <Link href="/ausgaben" className="text-white no-underline"><p>VERANSTALTUNGEN</p></Link>
         </div>
 
     );

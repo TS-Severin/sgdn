@@ -57,9 +57,6 @@ body {
   a:hover {
     @apply text-[#a0ff00] underline;
   }
-  a:hover {
-    @apply text-[#a0ff00];
-  }
 }
 
 @layer utilities {
