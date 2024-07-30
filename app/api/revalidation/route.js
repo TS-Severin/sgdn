@@ -13,6 +13,7 @@ export async function POST(request) {
     revalidateTag("landingpage");
     revalidateTag("homepage");
     revalidateTag("ausgabe");
+    revalidateTag("impressum");
 
     return NextResponse.json({ revalidated: true, now: Date.now() });
 }

@@ -9,9 +9,6 @@ export default async function Home() {
   const articles = await getAllArticles(3, isEnabled);
   const landingpage = await getLandingpage();
   const homepage = await getHomepage(isEnabled);
-  console.log("landingpage data: ", landingpage);
-  console.log("articles data: ", articles);
-  console.log("homepage data: ", homepage);
 
   return (
     <>
