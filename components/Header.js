@@ -12,9 +12,10 @@ export default function Header() {
                 <Image
                     src="/sgdn-logo.png"
                     alt="Schreiben gegen die Normen-Logo"
-                    className="h-8 rounded-lg sm:h-12 w-auto transition-all duration-500 ease-in-out"
-                    width={128}
-                    height={128}
+                    className="h-auto rounded-lg sm:h-20 w-full transition-all duration-500 ease-in-out"
+                    layoout="intrinsic"
+                    width={256}
+                    height={256}
                 />
             </Link>
 

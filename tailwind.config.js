@@ -19,8 +19,8 @@ module.exports = {
         "sgdn-theme": "url('../public/sgdn-background.jpg')",
       },
       colors: {
-        'green': '#b400a5',
-        'pink': '#7e5bef',
+        'green': '#a0ff00',
+        'pink': '#b400a5',
       }
     },
   },
