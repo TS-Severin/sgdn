@@ -13,7 +13,10 @@
     "contentful": "^10.12.8",
     "next": "14.2.5",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-multi-carousel": "^2.8.5",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "babel-plugin-module-resolver": "^5.0.2",
