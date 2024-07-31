@@ -6,6 +6,7 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+
     extend: {
       fontFamily: {
         "roboto": "var(--font-roboto)",
@@ -17,6 +18,10 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "sgdn-theme": "url('../public/sgdn-background.jpg')",
       },
+      colors: {
+        'green': '#b400a5',
+        'pink': '#7e5bef',
+      }
     },
   },
   plugins: [],
