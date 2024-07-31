@@ -6,6 +6,7 @@ html {
   display: flex;
   justify-content: center;
   background-color: var(--background);
+  box-sizing: border-box;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
   background-position: top center;
   /* background-attachment: fixed; */
   background-color: white;
+  box-sizing: border-box;
 }
 
 :root {
@@ -39,6 +41,32 @@ body {
     --secondary: #7a0073;
     --tertiary: #5a8b00;
   }
+}
+
+.carousel-container {
+  width: 100% !important;
+}
+
+@media screen and (max-width: 600px) {
+  /* carousel-container */
+  .carousel-container {
+    width: 380px !important;
+    overflow: hidden !important;
+  }
+}
+
+/* carousel-item */
+.carousel-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: 250px;
+}
+
+/* max-h-80 */
+.max-h-80 {
+  max-height: 20rem; /* Tailwind's max-h-80 class equivalent */
 }
 
 @layer base {
