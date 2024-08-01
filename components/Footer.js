@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <div className="flex text-sm justify-between sm:text-lg">
+        <div className="flex text-[0.7rem] justify-between sm:text-lg">
             <Link href="/impressum" className=" no-underline"><p>IMPRESSUM</p></Link>
             <div className="flex">
                 <Link href="mailto:ahoj@schreibengegendienormen.de" className="no-underline pl-4"><p>E-MAIL</p></Link>
