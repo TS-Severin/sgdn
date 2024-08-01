@@ -70,6 +70,10 @@ body {
   max-height: 20rem; /* Tailwind's max-h-80 class equivalent */
 }
 
+.active {
+  color: var(--tertiary) !important;
+}
+
 @layer base {
   h1 {
     @apply text-white;

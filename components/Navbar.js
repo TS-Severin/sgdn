@@ -7,18 +7,20 @@ export default function Navbar() {
     const pathname = usePathname()
 
 
+
+
     return (
         <div className="flex font-roboto text-sm space-between sm:text-lg">
 
 
 
 
-            <Link href="/wir" className="text-white no-underline {`link ${pathname === '/wir' ? '!text-green' : ''}`}"><p className="px-4">WIR</p></Link>
-            <Link href="/ausgaben" className="text-white no-underline"><p>VERANSTALTUNGEN</p></Link>
+            <Link href="/wir" className={`link ${pathname === '/wir' ? 'active' : ''} no-underline text-white px-4`}><p>WIR</p></Link>
+            <Link href="/ausgaben" className={`link ${pathname === '/ausgaben' ? 'active' : ''} no-underline text-white`}><p>VERANSTALTUNGEN</p></Link>
 
 
 
-        </div>
+        </div >
 
     );
 }
