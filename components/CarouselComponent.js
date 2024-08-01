@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import Image from 'next/image';
 
 const CarouselComponent = ({ images }) => {
     const [isClient, setIsClient] = useState(false);
@@ -46,9 +47,12 @@ const CarouselComponent = ({ images }) => {
                 >
                     {images.map((image, index) => (
                         <div key={index} className="flex justify-center items-center w-full">
-                            <img
+                            <Image
                                 src={image.url}
                                 alt={`Lesungsfoto ${index + 1}`}
+                                width={400}
+                                height={300}
+                                loading="lazy"
                                 className="object-contain w-auto pl-1"
                             />
                         </div>

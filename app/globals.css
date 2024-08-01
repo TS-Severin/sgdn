@@ -36,11 +36,11 @@ body {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #121212;
-    --text: white;
-    --primary: #333333;
-    --secondary: #7a0073;
-    --tertiary: #5a8b00;
+    --background: #e1f0f7;
+    --text: black;
+    --primary: white;
+    --secondary: #b400a5;
+    --tertiary: #a0ff00;
   }
 }
 
