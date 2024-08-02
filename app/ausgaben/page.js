@@ -68,7 +68,7 @@ export default async function Ausgabe() {
                         </div>
 
 
-                        <a href={documentToReactComponents(ausgabe.link)} className="text-blue-500 underline font-roboto" target="_blank" rel="noopener noreferrer">Watch the video</a>
+                        <a href={documentToReactComponents(ausgabe.link.json)} className="text-blue-500 underline font-roboto" target="_blank" rel="noopener noreferrer">Watch the video</a>
 
                     </div>
 
