@@ -39,7 +39,7 @@ const CarouselComponent = ({ images }) => {
                     minimumTouchDrag={80}
                     slidesToSlide={1}
                     infinite={true}
-                    partialVisible={typeof window !== 'undefined' && window.innerWidth < 600 ? false : true}
+                    partialVisible={true}
                     centerMode={false}
                     containerClass="carousel-container"
                     itemClass="carousel-image"
