@@ -5,6 +5,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { draftMode } from "next/headers";
 import CarouselComponent from "../../components/CarouselComponent";
 import { getAllAusgaben } from "@/lib/api";
+import Link from "next/link";
 
 export default async function Ausgabe() {
     const { isEnabled } = draftMode();
@@ -36,7 +37,7 @@ export default async function Ausgabe() {
                             <p>No images available</p>
                         )}
 
-                        <div className="flex flex-col sm:flex-row-reverse">
+                        <div className="flex flex-col sm:flex-row-reverse gap-6">
 
                             <div className="sm:w-1/3 font-roboto py-1">
                                 <h1 className="text-pink text-3xl uppercase font-bold pb-1">{ausgabe.ausgabeNummer}</h1>
@@ -49,7 +50,7 @@ export default async function Ausgabe() {
                                     {ausgabe.ortTitel}
                                 </h4>
 
-                                <p className="font-bold py-1">{documentToReactComponents(ausgabe.ortDetails.json)}</p>
+                                <div className="font-bold py-1">{documentToReactComponents(ausgabe.ortDetails.json)}</div>
 
 
 
@@ -61,15 +62,16 @@ export default async function Ausgabe() {
 
 
                             </div>
-                            <div className="sm:w-2/3 sm:columns-2 gap-6 pr-6">
-                                <div className="font-roboto-condensed">{documentToReactComponents(ausgabe.lesendeBios.json)}</div>
-                                <div className="font-roboto-condensed">{documentToReactComponents(ausgabe.lesendeBios2.json)}</div>
-                            </div>
+
+                            <div className="sm:w-1/3 font-roboto-condensed">{documentToReactComponents(ausgabe.lesendeBios.json)}</div>
+
+                            <div className="sm:w-1/3 font-roboto-condensed">{documentToReactComponents(ausgabe.lesendeBios2.json)}</div>
+
 
                         </div>
 
 
-                        <a href={documentToReactComponents(ausgabe.link.json)} className="text-blue-500 underline font-roboto" target="_blank" rel="noopener noreferrer">{documentToReactComponents(ausgabe.link.json)}</a>
+                        <div href={documentToReactComponents(ausgabe.link.json)} className="text-blue-500 sm:text-xl underline font-roboto pt-4" target="_blank" rel="noopener noreferrer">{documentToReactComponents(ausgabe.link.json)}</div>
 
                     </div>
 
