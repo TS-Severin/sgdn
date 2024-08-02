@@ -10,7 +10,7 @@ import { FaArrowRight } from "react-icons/fa";
 export default async function Ausgabe() {
     const { isEnabled } = draftMode();
     const ausgaben = await getAllAusgaben(isEnabled);
-    console.log("ausgaben: ", ausgaben);
+
 
 
 
