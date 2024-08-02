@@ -52,6 +52,7 @@ const CarouselComponent = ({ images }) => {
                                 alt={`Lesungsfoto ${index + 1}`}
                                 width={400}
                                 height={300}
+                                priority={true}
                                 className="object-contain w-auto pl-1"
                             />
                         </div>
