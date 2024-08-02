@@ -9,8 +9,6 @@ export async function POST(request) {
         return NextResponse.json({ message: "Invalid secret" }, { status: 401 });
     }
 
-    revalidateTag("articles");
-    revalidateTag("landingpage");
     revalidateTag("homepage");
     revalidateTag("ausgabe");
     revalidateTag("impressum");
