@@ -39,7 +39,7 @@ const CarouselComponent = ({ images }) => {
                     minimumTouchDrag={80}
                     slidesToSlide={1}
                     infinite={true}
-                    partialVisible={true}
+                    partialVisible={typeof window !== 'undefined' && window.innerWidth < 600 ? false : true}
                     centerMode={false}
                     containerClass="carousel-container"
                     itemClass="carousel-image"
@@ -50,9 +50,10 @@ const CarouselComponent = ({ images }) => {
                             <Image
                                 src={image.url}
                                 alt={`Lesungsfoto ${index + 1}`}
+
+                                loading="lazy"
                                 width={400}
                                 height={300}
-                                loading="lazy"
                                 className="object-contain w-auto pl-1"
                             />
                         </div>

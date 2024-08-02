@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Image from "next/image";
 import { Inter, Roboto, Roboto_Condensed } from "next/font/google";
 import "./globals.css";
 
@@ -25,7 +26,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="de">
       <body className={`${roboto.variable} ${robotoCondensed.variable}`}>
-
         <Header />
         <main>{children}</main>
         <div className="flex-1"></div>
