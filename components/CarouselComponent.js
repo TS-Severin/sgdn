@@ -47,11 +47,9 @@ const CarouselComponent = ({ images }) => {
                 >
                     {images.map((image, index) => (
                         <div key={index} className="flex justify-center items-center w-full">
-                            <img
+                            <Image
                                 src={image.url}
                                 alt={`Lesungsfoto ${index + 1}`}
-
-                                loading="lazy"
                                 width={400}
                                 height={300}
                                 className="object-contain w-auto pl-1"
