@@ -42,14 +42,14 @@ export default async function Ausgabe() {
                                 <h1 className="text-pink text-3xl uppercase font-bold pb-1">{ausgabe.ausgabeNummer}</h1>
                                 <h1 className="text-pink text-3xl uppercase font-bold py-1">{ausgabe.datumZeit}</h1>
 
-                                <h2 className="text-3xl font-bold pt-1 pb-4">{ausgabe.lesendeNamen.replace(/\n/g, '')}</h2>
+                                <h2 className="text-3xl font-bold pt-1 pb-4">{documentToReactComponents(ausgabe.lesendeNamen.json)}</h2>
 
 
                                 <h4 className="text-pink uppercase font-bold py-1">
                                     {ausgabe.ortTitel}
                                 </h4>
 
-                                <p className="font-bold py-1">{ausgabe.ortDetails}</p>
+                                <p className="font-bold py-1">{documentToReactComponents(ausgabe.ortDetails.json)}</p>
 
 
 
@@ -68,7 +68,7 @@ export default async function Ausgabe() {
                         </div>
 
 
-                        <a href={ausgabe.link} className="text-blue-500 underline font-roboto" target="_blank" rel="noopener noreferrer">Watch the video</a>
+                        <a href={documentToReactComponents(ausgabe.link)} className="text-blue-500 underline font-roboto" target="_blank" rel="noopener noreferrer">Watch the video</a>
 
                     </div>
 
