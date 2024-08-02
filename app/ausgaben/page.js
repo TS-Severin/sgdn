@@ -63,12 +63,13 @@ export default async function Ausgabe() {
                             </div>
                             <div className="sm:w-2/3 sm:columns-2 gap-6 pr-6">
                                 <div className="font-roboto-condensed">{documentToReactComponents(ausgabe.lesendeBios.json)}</div>
+                                <div className="font-roboto-condensed">{documentToReactComponents(ausgabe.lesendeBios2.json)}</div>
                             </div>
 
                         </div>
 
 
-                        <a href={documentToReactComponents(ausgabe.link.json)} className="text-blue-500 underline font-roboto" target="_blank" rel="noopener noreferrer">Watch the video</a>
+                        <a href={documentToReactComponents(ausgabe.link.json)} className="text-blue-500 underline font-roboto" target="_blank" rel="noopener noreferrer">{documentToReactComponents(ausgabe.link.json)}</a>
 
                     </div>
 
@@ -82,10 +83,3 @@ export default async function Ausgabe() {
     );
 };
 
-
-{/* <div className="mt-4">
-                            
-{ausgabe.fotosAusgabeCollection.items.map((foto, index) => (
-    <img key={index} src={foto.url} alt={`Foto ${index + 1}`} className="w-full h-auto mb-2" />
-))}
-</div> */}
