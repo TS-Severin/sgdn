@@ -9,7 +9,7 @@ import { getAllAusgaben } from "@/lib/api";
 export default async function Ausgabe() {
     const { isEnabled } = draftMode();
     const ausgaben = await getAllAusgaben(isEnabled);
-
+    console.log("ausgaben: ", ausgaben);
 
 
 
@@ -19,6 +19,7 @@ export default async function Ausgabe() {
         <>
 
             <div>
+
                 {ausgaben.map((ausgabe) => (
                     <div key={ausgabe.sys.id} className="pb-12">
 
