@@ -5,7 +5,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { draftMode } from "next/headers";
 import CarouselComponent from "../../components/CarouselComponent";
 import { getAllAusgaben } from "@/lib/api";
-import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
 
 export default async function Ausgabe() {
     const { isEnabled } = draftMode();
@@ -70,8 +70,11 @@ export default async function Ausgabe() {
 
                         </div>
 
+                        <div className="flex pt-4">
+                            <FaArrowRight className="text-black mr-1" />
+                            <div href={documentToReactComponents(ausgabe.link.json)} className="text-blue-500 sm:text-sm underline font-roboto flex" target="_blank" rel="noopener noreferrer">{documentToReactComponents(ausgabe.link.json)}</div>
+                        </div>
 
-                        <div href={documentToReactComponents(ausgabe.link.json)} className="text-blue-500 sm:text-xl underline font-roboto pt-4" target="_blank" rel="noopener noreferrer">{documentToReactComponents(ausgabe.link.json)}</div>
 
                     </div>
 

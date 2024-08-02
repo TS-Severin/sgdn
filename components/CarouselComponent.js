@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Image from 'next/image';
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+
 
 const CarouselComponent = ({ images }) => {
     const [isClient, setIsClient] = useState(false);
@@ -32,6 +34,7 @@ const CarouselComponent = ({ images }) => {
 
     return (
         <div className="container mx-auto w-full overflow-hidden pb-4">
+
             {isClient && (
                 <Carousel
                     responsive={responsive}
@@ -44,6 +47,11 @@ const CarouselComponent = ({ images }) => {
                     containerClass="carousel-container"
                     itemClass="carousel-image"
                     rewind={true}
+                    arrows={true}
+                    customLeftArrow={<FaArrowLeft className="absolute text-white left-[2%] cursor-pointer hover:text-green" />}
+                    customRightArrow={<FaArrowRight className="absolute text-white right-[2%] cursor-pointer hover:text-green" />}
+
+
                 >
                     {images.map((image, index) => (
                         <div key={index} className="flex justify-center items-center w-full">
@@ -58,8 +66,9 @@ const CarouselComponent = ({ images }) => {
                         </div>
                     ))}
                 </Carousel>
-            )}
-        </div>
+            )
+            }
+        </div >
     );
 };
 
