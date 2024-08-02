@@ -31,7 +31,7 @@ const CarouselComponent = ({ images }) => {
     };
 
     return (
-        <div className="container mx-auto w-full overflow-hidden">
+        <div className="container mx-auto w-full overflow-hidden pb-4">
             {isClient && (
                 <Carousel
                     responsive={responsive}

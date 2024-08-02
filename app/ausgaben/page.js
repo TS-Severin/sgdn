@@ -20,7 +20,7 @@ export default async function Ausgabe() {
 
             <div>
                 {ausgaben.map((ausgabe) => (
-                    <div key={ausgabe.sys.id}>
+                    <div key={ausgabe.sys.id} className="pb-12">
 
 
 
@@ -41,7 +41,7 @@ export default async function Ausgabe() {
                                 <h1 className="text-pink text-3xl uppercase font-bold pb-1">{ausgabe.ausgabeNummer}</h1>
                                 <h1 className="text-pink text-3xl uppercase font-bold py-1">{ausgabe.datumZeit}</h1>
 
-                                <h2 className="text-3xl font-bold pt-1 pb-4">{ausgabe.lesendeNamen.replace(/\n/g, ', ')}</h2>
+                                <h2 className="text-3xl font-bold pt-1 pb-4">{ausgabe.lesendeNamen.replace(/\n/g, '')}</h2>
 
 
                                 <h4 className="text-pink uppercase font-bold py-1">
@@ -60,7 +60,7 @@ export default async function Ausgabe() {
 
 
                             </div>
-                            <div className="sm:w-2/3 sm:columns-2">
+                            <div className="sm:w-2/3 sm:columns-2 gap-6 pr-6">
                                 <div className="font-roboto-condensed">{documentToReactComponents(ausgabe.lesendeBios.json)}</div>
                             </div>
 

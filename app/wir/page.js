@@ -1,13 +1,13 @@
 import { getWir } from "@/lib/api";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { draftMode } from "next/headers";
+import Image from "next/image";
 
 
 
 export default async function Wir() {
     const { isEnabled } = draftMode();
     const wir = await getWir(isEnabled);
-    console.log("wir data", wir);
     return (
         <>
             <div className="pt-2 pb-8 sm:flex flex-row">
@@ -22,7 +22,14 @@ export default async function Wir() {
                 </div>
 
                 <div className="sm:w-1/3">
-                    <img className="py-2" src={wir[0].kurationFoto.url} alt="Gruppenbild der Kurator*innen" />
+                    <Image
+
+                        className="py-2"
+
+                        src={wir[0].kurationFoto.url}
+                        alt="Gruppenbild der Kurator*innen"
+                        width={400}
+                        height={300} />
                     <h2 className="py-2 font-roboto text-pink">{wir[0].kurationTitel}</h2>
                     <div className="font-roboto-condensed">{documentToReactComponents(wir[0].kuratorinnen.json)}</div>
                     <h2 className="ry-2 font-roboto text-pink">{wir[0].ehemaligeTitel}</h2>

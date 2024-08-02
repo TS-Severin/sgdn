@@ -1,4 +1,4 @@
-import { getAllArticles, getLandingpage, getHomepage } from "@/lib/api";
+import { getHomepage } from "@/lib/api";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,8 +6,6 @@ import { draftMode } from "next/headers";
 
 export default async function Home() {
   const { isEnabled } = draftMode();
-  const articles = await getAllArticles(3, isEnabled);
-  const landingpage = await getLandingpage();
   const homepage = await getHomepage(isEnabled);
 
   return (
