@@ -37,7 +37,7 @@ export default async function Ausgabe() {
                             <p>No images available</p>
                         )}
 
-                        <div className="flex flex-col sm:flex-row-reverse gap-6">
+                        <div className="flex flex-col sm:gap-6 sm:flex-row-reverse ">
 
                             <div className="sm:w-1/3 font-roboto py-1">
                                 <h1 className="text-pink text-3xl uppercase font-bold pb-1">{ausgabe.ausgabeNummer}</h1>
@@ -70,9 +70,9 @@ export default async function Ausgabe() {
 
                         </div>
 
-                        <div className="flex pt-4">
+                        <div className="flex pt-4 sm:text-2xl">
                             <FaArrowRight className="text-black mr-1" />
-                            <div href={documentToReactComponents(ausgabe.link.json)} className="text-blue-500 sm:text-sm underline font-roboto flex" target="_blank" rel="noopener noreferrer">{documentToReactComponents(ausgabe.link.json)}</div>
+                            <div href={documentToReactComponents(ausgabe.link.json)} className="text-blue-500 sm:text-bold underline font-roboto flex" target="_blank" rel="noopener noreferrer">{documentToReactComponents(ausgabe.link.json)}</div>
                         </div>
 
 
