@@ -1,7 +1,5 @@
 import { getHomepage } from "@/lib/api";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import Image from "next/image";
-import Link from "next/link";
 import { draftMode } from "next/headers";
 
 export default async function Home() {

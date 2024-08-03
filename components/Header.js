@@ -13,7 +13,7 @@ export default function Header() {
                     src="/sgdn-logo.png"
                     alt="Schreiben gegen die Normen-Logo"
                     className="h-auto rounded-lg sm:h-20 w-full transition-all duration-500 ease-in-out"
-                    layoout="intrinsic"
+                    layout="intrinsic"
                     width={256}
                     height={256}
                 />
