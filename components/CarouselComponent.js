@@ -11,6 +11,8 @@ import LightboxComponent from './LightboxComponent';
 const CarouselComponent = ({ images }) => {
     const [isClient, setIsClient] = useState(false);
     const [open, setOpen] = React.useState(false);
+    const [currentImage, setCurrentImage] = useState("");
+
 
     const handleClose = () => setOpen(false);
 
@@ -40,7 +42,7 @@ const CarouselComponent = ({ images }) => {
 
     return (
         <>
-            <LightboxComponent open={open} images={images} handleClose={handleClose} />
+            <LightboxComponent open={open} images={images} handleClose={handleClose} currentImage={currentImage} />
             <div className="container mx-auto w-full overflow-hidden pb-4">
 
 
@@ -72,7 +74,13 @@ const CarouselComponent = ({ images }) => {
                                     height={300}
                                     priority={true}
                                     className="object-contain w-auto pl-1"
-                                    onClick={() => setOpen(true)}
+                                    onClick={
+                                        () => {
+                                            setOpen(true);
+                                            setCurrentImage(image.url);
+
+                                        }}
+
                                 />
                             </div>
 
