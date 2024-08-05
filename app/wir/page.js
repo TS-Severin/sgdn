@@ -13,11 +13,11 @@ export default async function Wir() {
             <div className="pt-2 pb-8 sm:flex flex-row">
                 <div className="font-roboto sm:w-2/3 sm:mr-4">
                     <h1 className="font-roboto text-4xl pb-4 text-black sm:text-white">{wir[0].titel}</h1>
-                    <h3 className="font-roboto text-lg pb-4">{wir[0].head1}</h3>
+                    <div className="font-roboto text-lg pb-4">{wir[0].head1}</div>
                     <img className="py-2" src={wir[0].artikelfoto1.url} alt="Übersicht einer Lesung" />
                     <div className="py-2 font-roboto-condensed sm:columns-2">{documentToReactComponents(wir[0].paragraph1.json)}</div>
                     <img className="py-2" src={wir[0].artikelfoto2.url} alt="Übersicht einer Lesung" />
-                    <h3 className="font-roboto text-lg pb-4">{wir[0].head2}</h3>
+                    <div className="font-roboto text-lg pb-4">{wir[0].head2}</div>
                     <div className="py-2 font-roboto-condensed sm:columns-2">{documentToReactComponents(wir[0].paragraph2.json)}</div>
                 </div>
 

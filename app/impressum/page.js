@@ -9,7 +9,7 @@ export default async function Impressum() {
     return (
         <>
             <h1 className="text-4xl font-roboto pb-4">{impressum[0].titel}</h1>
-            <div className="font-roboto">{documentToReactComponents(impressum[0].impressum.json)}</div>
+            <div className="font-roboto pb-4">{documentToReactComponents(impressum[0].impressum.json)}</div>
         </>
     );
 }
