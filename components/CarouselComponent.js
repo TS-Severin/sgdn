@@ -60,8 +60,8 @@ const CarouselComponent = ({ images }) => {
                         itemClass="carousel-image"
                         rewind={true}
                         arrows={true}
-                        customLeftArrow={<FaArrowLeft className="absolute text-white text-2xl left-[2%] cursor-pointer hover:text-green" />}
-                        customRightArrow={<FaArrowRight className="absolute text-white text-2xl right-[2%] cursor-pointer hover:text-green" />}
+                        customLeftArrow={<FaArrowLeft className="absolute z-10 text-white text-2xl left-[2%] cursor-pointer hover:text-green" />}
+                        customRightArrow={<FaArrowRight className="absolute z-10 text-white text-2xl right-[2%] cursor-pointer hover:text-green" />}
 
 
                     >

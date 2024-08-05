@@ -4,7 +4,7 @@ import "yet-another-react-lightbox/styles.css";
 import { useState } from "react";
 
 export default function LightboxComponent({ images, open, handleClose, currentImage }) {
-    console.log("image: ", currentImage);
+
 
     return (
         <>
