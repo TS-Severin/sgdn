@@ -3,6 +3,17 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { draftMode } from "next/headers";
 import Image from "next/image";
 
+const options = {
+    renderNode: {
+        'hyperlink': (node, children) => {
+            return (
+                <a href={node.data.uri} target="_blank" rel="noopener noreferrer">
+                    {children}
+                </a>
+            );
+        },
+    },
+};
 
 
 export default async function Wir() {
@@ -15,10 +26,10 @@ export default async function Wir() {
                     <h1 className="font-roboto text-bold text-4xl pb-4 text-black sm:text-white">{wir[0].titel}</h1>
                     <div className="font-roboto text-lg pb-4">{wir[0].head1}</div>
                     <img className="py-2" src={wir[0].artikelfoto1.url} alt="Übersicht einer Lesung" />
-                    <div className="py-2 font-roboto sm:columns-2">{documentToReactComponents(wir[0].paragraph1.json)}</div>
+                    <div className="py-2 font-roboto sm:columns-2">{documentToReactComponents(wir[0].paragraph1.json, options)}</div>
                     <img className="py-2" src={wir[0].artikelfoto2.url} alt="Übersicht einer Lesung" />
                     <div className="font-roboto text-lg pb-4">{wir[0].head2}</div>
-                    <div className="py-2 font-roboto sm:columns-2">{documentToReactComponents(wir[0].paragraph2.json)}</div>
+                    <div className="py-2 font-roboto sm:columns-2">{documentToReactComponents(wir[0].paragraph2.json, options)}</div>
                 </div>
 
                 <div className="sm:w-1/3">
@@ -31,13 +42,13 @@ export default async function Wir() {
                         width={400}
                         height={300} />
                     <h2 className="py-2 font-roboto-condensed uppercase text-pink">{wir[0].kurationTitel}</h2>
-                    <div className="font-roboto-condensed">{documentToReactComponents(wir[0].kuratorinnen.json)}</div>
+                    <div className="font-roboto-condensed">{documentToReactComponents(wir[0].kuratorinnen.json, options)}</div>
                     <h2 className="pb-2 pt-6 font-roboto-condensed uppercase text-pink">{wir[0].ehemaligeTitel}</h2>
-                    <div className="font-roboto-condensed">{documentToReactComponents(wir[0].ehemalige.json)}</div>
+                    <div className="font-roboto-condensed">{documentToReactComponents(wir[0].ehemalige.json, options)}</div>
                     <h2 className="py-2 font-roboto-condensed uppercase text-pink">{wir[0].kooperationTitel}</h2>
-                    <div className="font-roboto-condensed">{documentToReactComponents(wir[0].kooperationen.json)}</div>
+                    <div className="font-roboto-condensed">{documentToReactComponents(wir[0].kooperationen.json, options)}</div>
                     <h2 className="py-2 font-roboto-condensed text-pink">{wir[0].lesereihenTitel}</h2>
-                    <div className="font-roboto-condensed">{documentToReactComponents(wir[0].lesereihenText.json)}</div>
+                    <div className="font-roboto-condensed">{documentToReactComponents(wir[0].lesereihenText.json, options)}</div>
                     <img className="pb-2 scale-50 justify-end" src={wir[0].lesereihenLogo.url} alt="Logo der Unabhängigen Lesereihen e. V." />
                 </div>
             </div>
