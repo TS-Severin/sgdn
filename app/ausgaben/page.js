@@ -40,10 +40,10 @@ export default async function Ausgabe() {
                         <div className="flex flex-col sm:gap-6 sm:flex-row-reverse ">
 
                             <div className="sm:w-1/3 font-roboto py-1">
-                                <h1 className="text-pink text-3xl uppercase font-bold pb-1">{ausgabe.ausgabeNummer}</h1>
-                                <h1 className="text-pink text-3xl uppercase font-bold py-1">{ausgabe.datumZeit}</h1>
+                                <h2 className="text-pink text-3xl uppercase font-bold font-roboto-condensed">{ausgabe.ausgabeNummer}</h2>
+                                <h2 className="text-pink text-3xl uppercase font-bold font-roboto-condensed">{ausgabe.datumZeit}</h2>
 
-                                <h2 className="text-3xl font-bold pt-1 pb-4">{documentToReactComponents(ausgabe.lesendeNamen.json)}</h2>
+                                <h2 className="text-3xl font-bold font-roboto-condensed pb-4">{documentToReactComponents(ausgabe.lesendeNamen.json)}</h2>
 
 
                                 <h4 className="text-pink uppercase font-bold py-1">

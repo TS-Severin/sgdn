@@ -10,7 +10,7 @@ export default function Navbar() {
 
 
     return (
-        <div className="flex font-roboto text-sm space-between sm:text-lg">
+        <div className="flex font-roboto-condensed font-bold text-lg space-between sm:text-xl">
 
 
 
