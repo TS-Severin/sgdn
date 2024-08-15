@@ -84,6 +84,9 @@ body {
   h3 {
     @apply text-black pt-2;
   }
+  h6 {
+    @apply pt-2;
+  }
   a {
     @apply text-black underline;
   }
