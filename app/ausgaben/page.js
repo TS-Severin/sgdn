@@ -1,6 +1,6 @@
 
 import React from "react";
-
+import Link from "next/link";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { draftMode } from "next/headers";
 import CarouselComponent from "../../components/CarouselComponent";
@@ -84,7 +84,7 @@ export default async function Ausgabe() {
 
                         <div className="flex pt-4 sm:text-xl">
                             <FaArrowRight className="text-black mr-1 relative top-1" />
-                            <Link href={documentToReactComponents(ausgabe.link.json)} className="text-blue-500 sm:text-bold underline font-roboto flex" target="_blank" rel="noopener noreferrer">{documentToReactComponents(ausgabe.link.json)}</Link>
+                            <div className="sm:text-bold underline font-roboto flex">{documentToReactComponents(ausgabe.link.json, options)}</div>
                         </div>
 
 
