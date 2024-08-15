@@ -32,10 +32,10 @@ export default async function Wir() {
                         height={300} />
                     <h2 className="py-2 font-roboto-condensed uppercase text-pink">{wir[0].kurationTitel}</h2>
                     <div className="font-roboto-condensed">{documentToReactComponents(wir[0].kuratorinnen.json)}</div>
-                    <h2 className="pb-2 pt-6 font-roboto uppercase text-pink">{wir[0].ehemaligeTitel}</h2>
+                    <h2 className="pb-2 pt-6 font-roboto-condensed uppercase text-pink">{wir[0].ehemaligeTitel}</h2>
                     <div className="font-roboto-condensed">{documentToReactComponents(wir[0].ehemalige.json)}</div>
                     <h2 className="py-2 font-roboto-condensed uppercase text-pink">{wir[0].kooperationTitel}</h2>
-                    <div>{documentToReactComponents(wir[0].kooperationen.json)}</div>
+                    <div className="font-roboto-condensed">{documentToReactComponents(wir[0].kooperationen.json)}</div>
                     <h2 className="py-2 font-roboto-condensed text-pink">{wir[0].lesereihenTitel}</h2>
                     <div className="font-roboto-condensed">{documentToReactComponents(wir[0].lesereihenText.json)}</div>
                     <img className="py-2 scale-50" src={wir[0].lesereihenLogo.url} alt="Logo der Unabhängigen Lesereihen e. V." />
