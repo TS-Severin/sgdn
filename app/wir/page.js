@@ -38,7 +38,7 @@ export default async function Wir() {
                     <div className="font-roboto-condensed">{documentToReactComponents(wir[0].kooperationen.json)}</div>
                     <h2 className="py-2 font-roboto-condensed text-pink">{wir[0].lesereihenTitel}</h2>
                     <div className="font-roboto-condensed">{documentToReactComponents(wir[0].lesereihenText.json)}</div>
-                    <img className="py-2 scale-50 justify-start" src={wir[0].lesereihenLogo.url} alt="Logo der Unabhängigen Lesereihen e. V." />
+                    <img className="pb-2 scale-50 justify-start" src={wir[0].lesereihenLogo.url} alt="Logo der Unabhängigen Lesereihen e. V." />
                 </div>
             </div>
         </>
