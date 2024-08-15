@@ -84,7 +84,7 @@ export default async function Ausgabe() {
 
                         <div className="flex pt-4 sm:text-xl">
                             <FaArrowRight className="text-black mr-1 relative top-1" />
-                            <div href={documentToReactComponents(ausgabe.link.json)} className="text-blue-500 sm:text-bold underline font-roboto flex" target="_blank" rel="noopener noreferrer">{documentToReactComponents(ausgabe.link.json)}</div>
+                            <Link href={documentToReactComponents(ausgabe.link.json)} className="text-blue-500 sm:text-bold underline font-roboto flex" target="_blank" rel="noopener noreferrer">{documentToReactComponents(ausgabe.link.json)}</Link>
                         </div>
 
 
