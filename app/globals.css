@@ -25,6 +25,13 @@ body {
   box-shadow: 0px 0px 20px var(--secondary);
 }
 
+/* remove shadow on max-width */
+@media screen and (max-width: 920px) {
+  .body {
+    box-shadow: none;
+  }
+}
+
 :root {
   /* --background: #eab8e6; */
   --background: #e1f0f7;
