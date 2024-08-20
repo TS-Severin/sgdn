@@ -55,22 +55,22 @@ export default async function Ausgabe() {
                                 <h2 className="text-pink text-3xl uppercase font-bold font-roboto-condensed">{ausgabe.ausgabeNummer}</h2>
                                 <h2 className="text-pink text-3xl uppercase font-bold font-roboto-condensed">{ausgabe.datumZeit}</h2>
 
-                                <h2 className="text-3xl font-bold font-roboto-condensed pb-4">{documentToReactComponents(ausgabe.lesendeNamen.json, options)}</h2>
+                                <h2 className="text-3xl font-bold  font-roboto-condensed pb-4">{documentToReactComponents(ausgabe.lesendeNamen.json, options)}</h2>
 
 
-                                <h4 className="text-pink uppercase font-bold py-1">
+                                <h4 className="text-pink font-roboto-condensed uppercase font-bold pt-1">
                                     {ausgabe.ortTitel}
                                 </h4>
 
-                                <div className="font-bold py-1">{documentToReactComponents(ausgabe.ortDetails.json, options)}</div>
+                                <div className="font-roboto-condensed font-bold pb-1">{documentToReactComponents(ausgabe.ortDetails.json, options)}</div>
 
 
 
 
-                                <h4 className="text-pink uppercase font-bold py-1">
+                                <h4 className="text-pink font-bold font-roboto-condensed uppercase  pt-1">
 
                                     {ausgabe.moderation}</h4>
-                                <p className="font-bold pt-1 py-4">{ausgabe.moderationNamen}</p>
+                                <p className="font-roboto-condensed font-bold pb-4">{ausgabe.moderationNamen}</p>
 
 
                             </div>
