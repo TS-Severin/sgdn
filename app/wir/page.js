@@ -45,9 +45,9 @@ export default async function Wir() {
                     <div className="font-roboto-condensed">{documentToReactComponents(wir[0].kuratorinnen.json, options)}</div>
                     <h2 className="pt-6 font-roboto-condensed uppercase text-pink">{wir[0].ehemaligeTitel}</h2>
                     <div className="font-roboto-condensed">{documentToReactComponents(wir[0].ehemalige.json, options)}</div>
-                    <h2 className="pt-2 font-roboto-condensed uppercase text-pink">{wir[0].kooperationTitel}</h2>
+                    <h2 className="pt-6 font-roboto-condensed uppercase text-pink">{wir[0].kooperationTitel}</h2>
                     <div className="font-roboto-condensed">{documentToReactComponents(wir[0].kooperationen.json, options)}</div>
-                    <h2 className="pt-2 font-roboto-condensed text-pink">{wir[0].lesereihenTitel}</h2>
+                    <h2 className="pt-6 font-roboto-condensed text-pink">{wir[0].lesereihenTitel}</h2>
                     <div className="font-roboto-condensed">{documentToReactComponents(wir[0].lesereihenText.json, options)}</div>
                     <img className="scale-50 justify-end" src={wir[0].lesereihenLogo.url} alt="Logo der Unabhängigen Lesereihen e. V." />
                 </div>
