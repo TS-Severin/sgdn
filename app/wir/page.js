@@ -23,7 +23,7 @@ export default async function Wir() {
         <>
             <div className="pt-2 pb-8 sm:flex flex-row">
                 <div className="font-roboto sm:w-2/3 sm:mr-4">
-                    <h1 className="font-roboto text-bold text-4xl pb-4 text-black sm:text-white">{wir[0].titel}</h1>
+                    <h1 className="font-roboto-condensed text-bold text-3xl pb-4 text-black sm:text-white">{wir[0].titel}</h1>
                     <div className="font-roboto text-lg pb-4">{wir[0].head1}</div>
                     <img className="py-2" src={wir[0].artikelfoto1.url} alt="Übersicht einer Lesung" />
                     <div className="py-2 font-roboto sm:columns-2">{documentToReactComponents(wir[0].paragraph1.json, options)}</div>
@@ -49,7 +49,7 @@ export default async function Wir() {
                     <div className="font-roboto-condensed">{documentToReactComponents(wir[0].kooperationen.json, options)}</div>
                     <h2 className="pt-6 font-roboto-condensed text-pink">{wir[0].lesereihenTitel}</h2>
                     <div className="font-roboto-condensed">{documentToReactComponents(wir[0].lesereihenText.json, options)}</div>
-                    <img className="scale-50 justify-end" src={wir[0].lesereihenLogo.url} alt="Logo der Unabhängigen Lesereihen e. V." />
+                    <img className="scale-50 justify-start" src={wir[0].lesereihenLogo.url} alt="Logo der Unabhängigen Lesereihen e. V." />
                 </div>
             </div>
         </>
