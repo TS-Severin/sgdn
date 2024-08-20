@@ -55,7 +55,7 @@ export default async function Ausgabe() {
                                 <h2 className="text-pink text-3xl uppercase font-bold font-roboto-condensed">{ausgabe.ausgabeNummer}</h2>
                                 <h2 className="text-pink text-3xl uppercase font-bold font-roboto-condensed">{ausgabe.datumZeit}</h2>
 
-                                <h2 className="text-3xl font-bold  font-roboto-condensed pb-4">{documentToReactComponents(ausgabe.lesendeNamen.json, options)}</h2>
+                                <h2 className="text-3xl font-bold text-gray-700 font-roboto-condensed pb-4">{documentToReactComponents(ausgabe.lesendeNamen.json, options)}</h2>
 
 
                                 <h4 className="text-pink font-roboto-condensed uppercase font-bold pt-1">
@@ -75,7 +75,7 @@ export default async function Ausgabe() {
 
                             </div>
 
-                            <div className="sm:w-1/3 font-roboto-condensed">{documentToReactComponents(ausgabe.lesendeBios.json, options)}</div>
+                            <div className="sm:w-1/3 font-roboto-condensed ">{documentToReactComponents(ausgabe.lesendeBios.json, options)}</div>
 
                             <div className="sm:w-1/3 font-roboto-condensed">{documentToReactComponents(ausgabe.lesendeBios2.json, options)}</div>
 
