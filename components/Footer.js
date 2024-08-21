@@ -1,5 +1,17 @@
 import Link from "next/link";
 
+const options = {
+    renderNode: {
+        'hyperlink': (node, children) => {
+            return (
+                <a href={node.data.uri} target="_blank" rel="noopener noreferrer">
+                    {children}
+                </a>
+            );
+        },
+    },
+};
+
 export default function Footer() {
     return (
         <div className="flex pt-4 text-lg justify-between sm:text-xl">
