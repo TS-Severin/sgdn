@@ -10,6 +10,7 @@ export async function POST(request) {
     }
 
     revalidateTag("homepage");
+    revalidateTag("wir");
     revalidateTag("ausgabe");
     revalidateTag("impressum");
 
