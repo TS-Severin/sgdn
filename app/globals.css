@@ -5,9 +5,9 @@
 html {
   display: flex;
   justify-content: center;
-  /* background: radial-gradient(var(--tertiary), white); */
+  background: radial-gradient(var(--tertiary), white);
   /* background-color: whitesmoke; */
-  background-color: #c7ff4d;
+  /* background-color: #c7ff4d; */
   box-sizing: border-box;
 }
 
@@ -40,8 +40,8 @@ body {
 }
 
 :root {
-  --background: #eab8e6;
-  /* --background: #e1f0f7; */
+  /* --background: #eab8e6; */
+  --background: #e1f0f7;
   --text: #6b7280;
   --primary: white;
   --secondary: #b400a5;
