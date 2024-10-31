@@ -5,9 +5,9 @@
 html {
   display: flex;
   justify-content: center;
-  background: radial-gradient(var(--tertiary), white);
+  /* background: radial-gradient(var(--tertiary), white); */
   /* background-color: whitesmoke; */
-  /* background-color: #c7ff4d; */
+  background-color: #c7ff4d;
   box-sizing: border-box;
 }
 
