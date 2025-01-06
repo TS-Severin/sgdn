@@ -81,12 +81,15 @@ export default async function Ausgabe() {
 
 
                         </div>
+                        {(ausgabe.link.json !== null && ausgabe.link.json !== undefined) ?
+                            <div className="flex pt-4 sm:text-xl">
 
-                        <div className="flex pt-4 sm:text-xl">
-                            <FaArrowRight className="text-black mr-1 relative top-1" />
-                            <div className="sm:text-bold underline font-roboto flex">{documentToReactComponents(ausgabe.link.json, options)}</div>
-                        </div>
-
+                                <div className="sm:text-bold underline font-roboto flex">
+                                    <FaArrowRight className="text-black mr-1 relative top-1" />
+                                    {documentToReactComponents(ausgabe.link.json, options)}</div>
+                            </div>
+                            : null
+                        }
 
                     </div>
 
