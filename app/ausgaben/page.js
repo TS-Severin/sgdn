@@ -81,7 +81,7 @@ export default async function Ausgabe() {
 
 
                         </div>
-                        {documentToReactComponents(ausgabe.link.json, options) !== <p></p> ?
+                        {!documentToReactComponents(ausgabe.link.json, options).includes("xxx") ?
                             <div className="flex pt-4 sm:text-xl">
 
                                 <div className="sm:text-bold underline font-roboto flex">
