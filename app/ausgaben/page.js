@@ -81,7 +81,7 @@ export default async function Ausgabe() {
 
 
                         </div>
-                        {(ausgabe.link.json !== null && ausgabe.link.json !== undefined) ?
+                        {(ausgabe.link.json !== " ") ?
                             <div className="flex pt-4 sm:text-xl">
 
                                 <div className="sm:text-bold underline font-roboto flex">
