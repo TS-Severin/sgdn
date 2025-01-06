@@ -27,7 +27,7 @@ export default async function Ausgabe() {
     const { isEnabled } = draftMode();
     const ausgaben = await getAllAusgaben(isEnabled);
 
-
+    console.log(ausgaben[0].link.json.content[0].content[1].content[0].value);
 
 
     return (
@@ -85,7 +85,7 @@ export default async function Ausgabe() {
 
                         </div>
                         {
-                            ausgabe.link.json ? (
+                            !ausgaben[0].link.json.content[0].content[1].content[0].value.includes("xxx") ? (
                                 <div className="flex pt-4 sm:text-xl">
                                     <div className="sm:text-bold underline font-roboto flex">
                                         <FaArrowRight className="text-black mr-1 relative top-1" />
