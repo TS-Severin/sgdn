@@ -6,7 +6,6 @@ import { draftMode } from "next/headers";
 import CarouselComponent from "../../components/CarouselComponent";
 import { getAllAusgaben } from "@/lib/api";
 import { FaArrowRight } from "react-icons/fa";
-import { documentToPlainTextString } from '@contentful/rich-text-react-renderer';
 
 const options = {
     renderNode: {
@@ -22,9 +21,12 @@ const options = {
 
 
 
+
+
 export default async function Ausgabe() {
     const { isEnabled } = draftMode();
     const ausgaben = await getAllAusgaben(isEnabled);
+
 
 
 
@@ -83,7 +85,7 @@ export default async function Ausgabe() {
 
                         </div>
                         {
-                            ausgabe.link.json && !documentToPlainTextString(ausgabe.link.json).includes("xxx") ? (
+                            ausgabe.link.json ? (
                                 <div className="flex pt-4 sm:text-xl">
                                     <div className="sm:text-bold underline font-roboto flex">
                                         <FaArrowRight className="text-black mr-1 relative top-1" />
