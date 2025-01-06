@@ -19,11 +19,11 @@ const options = {
     },
 };
 
+
+
 export default async function Ausgabe() {
     const { isEnabled } = draftMode();
     const ausgaben = await getAllAusgaben(isEnabled);
-
-
 
 
 
@@ -81,7 +81,7 @@ export default async function Ausgabe() {
 
 
                         </div>
-                        {(ausgabe.link.json !== " ") ?
+                        {documentToReactComponents(ausgabe.link.json, options) !== <p></p> ?
                             <div className="flex pt-4 sm:text-xl">
 
                                 <div className="sm:text-bold underline font-roboto flex">
