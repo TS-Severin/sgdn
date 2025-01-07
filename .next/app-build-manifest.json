@@ -1,16 +1,21 @@
 {
   "pages": {
-    "/ausgaben/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/ausgaben/page.css",
-      "static/chunks/app/ausgaben/page.js"
+      "static/chunks/app/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
+    ],
+    "/ausgaben/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/ausgaben/page.css",
+      "static/chunks/app/ausgaben/page.js"
     ]
   }
 }
