@@ -74,7 +74,16 @@ export default async function Ausgabe() {
 
                                     {ausgabe.moderation}</h4>
                                 <p className="font-roboto-condensed font-bold pb-4">{ausgabe.moderationNamen}</p>
-
+                                {
+                                    JSON.stringify(ausgabe.link.json).includes("xxx") ? null : (
+                                        <div className="flex pt-4 sm:text-xl">
+                                            <div className="sm:text-bold underline font-roboto flex">
+                                                <FaArrowRight className="text-black mr-1 relative top-1" />
+                                                {documentToReactComponents(ausgabe.link.json, options)}
+                                            </div>
+                                        </div>
+                                    )
+                                }
 
                             </div>
 
@@ -84,16 +93,7 @@ export default async function Ausgabe() {
 
 
                         </div>
-                        {
-                            JSON.stringify(ausgabe.link.json).includes("xxx") ? null : (
-                                <div className="flex pt-4 sm:text-xl">
-                                    <div className="sm:text-bold underline font-roboto flex">
-                                        <FaArrowRight className="text-black mr-1 relative top-1" />
-                                        {documentToReactComponents(ausgabe.link.json, options)}
-                                    </div>
-                                </div>
-                            )
-                        }
+
 
                     </div>
 
