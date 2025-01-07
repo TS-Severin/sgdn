@@ -73,10 +73,10 @@ export default async function Ausgabe() {
                                 <h4 className="text-pink font-bold font-roboto-condensed uppercase  pt-1">
 
                                     {ausgabe.moderation}</h4>
-                                <p className="font-roboto-condensed font-bold pb-4">{ausgabe.moderationNamen}</p>
+                                <p className="font-roboto-condensed font-bold pb-2">{ausgabe.moderationNamen}</p>
                                 {
                                     JSON.stringify(ausgabe.link.json).includes("xxx") ? null : (
-                                        <div className="flex pt-4 sm:text-xl">
+                                        <div className="flex sm:text-xl">
                                             <div className="sm:text-bold underline font-roboto flex">
                                                 <FaArrowRight className="text-black mr-1 relative top-1" />
                                                 {documentToReactComponents(ausgabe.link.json, options)}
