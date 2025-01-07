@@ -27,8 +27,7 @@ export default async function Ausgabe() {
     const { isEnabled } = draftMode();
     const ausgaben = await getAllAusgaben(isEnabled);
 
-    // console.log(ausgaben[0].link.json.content[0].content[1].content[0].value);
-    console.log("XXXXX", JSON.stringify(ausgaben[0].link.json));
+
 
 
     return (
