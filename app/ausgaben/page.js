@@ -86,11 +86,13 @@ export default async function Ausgabe() {
                                 }
 
                             </div>
+                            <div className="order-2 sm:order-1 flex flex-col sm:flex-row sm:gap-6 sm:w-2/3">
+                                <div className="sm:w-1/2 font-roboto-condensed">{documentToReactComponents(ausgabe.lesendeBios2.json, options)}</div>
 
-                            <div className="sm:w-1/3 font-roboto-condensed ">{documentToReactComponents(ausgabe.lesendeBios.json, options)}</div>
+                                <div className="sm:w-1/2 font-roboto-condensed ">{documentToReactComponents(ausgabe.lesendeBios.json, options)}</div>
 
-                            <div className="sm:w-1/3 font-roboto-condensed">{documentToReactComponents(ausgabe.lesendeBios2.json, options)}</div>
 
+                            </div>
 
                         </div>
 
